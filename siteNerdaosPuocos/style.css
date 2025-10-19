@@ -1,0 +1,132 @@
+/* Importante: A imagem de fundo precisa estar na mesma pasta ou o caminho correto */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0; /* Cor do texto principal */
+    background-image: url('fundo.png'); /* Define a segunda imagem como background */
+    background-size: cover; /* Cobre todo o fundo, cortando se necessário */
+    background-attachment: fixed; /* Mantém o background fixo ao rolar */
+    background-position: center center; /* Centraliza a imagem */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o footer para baixo */
+}
+
+header {
+    background-color: rgba(0, 0, 50, 0.8); /* Azul escuro com transparência para o header */
+    color: #00ffff; /* Ciano brilhante para o título do header */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #00ffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+main {
+    flex-grow: 1; /* Permite que o main ocupe o espaço restante */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os blocos verticalmente */
+    gap: 30px; /* Espaço entre as seções */
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 20px auto; /* Centraliza o main na página */
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente para o conteúdo */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Sombra neon */
+}
+
+.profile-section {
+    width: 100%;
+    text-align: center;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column; /* Padrão em telas pequenas */
+    align-items: center;
+    background-color: rgba(0, 0, 30, 0.7); /* Fundo para o cartão de perfil */
+    border: 1px solid #00ffff; /* Borda ciano */
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 180px; /* Tamanho da imagem de perfil */
+    height: 180px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    border: 4px solid #00ffff; /* Borda ciano na imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.profile-description {
+    text-align: center;
+}
+
+.profile-description h2 {
+    color: #00ff00; /* Verde neon para o subtítulo */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.profile-description p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.content-placeholder {
+    background-color: rgba(0, 0, 30, 0.7);
+    border: 1px solid #00ff00;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-placeholder h3 {
+    color: #ff00ff; /* Magenta neon */
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+
+footer {
+    background-color: rgba(0, 0, 50, 0.8); /* Azul escuro com transparência para o footer */
+    color: #00ffff;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 2px solid #00ffff;
+    margin-top: auto; /* Garante que o footer fique no final da página */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsividade básica para telas maiores */
+@media (min-width: 768px) {
+    .profile-card {
+        flex-direction: row; /* Alinha a imagem e o texto lado a lado */
+        text-align: left;
+    }
+
+    .profile-image {
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+
+    .profile-description {
+        text-align: left;
+    }
+}
